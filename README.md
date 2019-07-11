@@ -25,6 +25,24 @@ Now you can start intefacing jupyter and R.
 
 ```
 conda activate python3
-jupyter notebook
+conda install -c r rpy2 
 ```
+
+### Use of %%R in your jupyter notebook
+
+In the first Cell you run this:  
+```
+import rpy2.rinterface
+%load_ext rpy2.ipython
+```
+
+Once you do that, if you start the cell with %%R , it is a R cell.  
+
+#### Usefull commands  
+
+Transform pandas dataframes to R dataframes.  
+```
+%%R - i pd_dataframe
+```
+
 
