@@ -66,6 +66,8 @@ if not have_package:
         
 ```
 
+You can see the usefull commands in action in the notebook R_&_python.ipynb
+
 
 #### Usefull commands  
 
