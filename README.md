@@ -6,7 +6,7 @@ Start by installing the R kernel in the jupyter lab. Follow [this](https://richp
 
 - Install [R](https://cloud.r-project.org/).  
 - cd to R.exe    
-- Open Anaconda prompt.  
+- Open Anaconda prompt (activate your environment python3).  
   - cd to R. exe
   - Open R by typing: R.exe  
  
@@ -20,4 +20,11 @@ IRkernel::installspec()
 ```
 
 If the second command line does not work, you need to install Git [here](https://git-scm.com/download/win).  
+
+Now you can start intefacing jupyter and R.
+
+```
+conda activate python3
+jupyter notebook
+```
 
