@@ -88,6 +88,12 @@ model =  lmer('A ~ B + (1|C)', data = python_df)
 summary <- summary(model)
 ```
 
+Generalized logistic mixed model.  
+```
+%%R -o model -o summary -i python_df2 
+model <-  glmer('A ~ B + (1 | C)', data = python_df2, family = 'binomial', control = glmerControl(optimizer = "bobyqa"), nAGQ = 10)
+summary <- summary(model)
+```
 
 
 
