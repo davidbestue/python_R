@@ -31,6 +31,7 @@ conda install -c r rpy2
 ### Use of %%R in your jupyter notebook
 
 In the first Cell you run this:  
+
 ```
 import rpy2.rinterface
 %load_ext rpy2.ipython
@@ -39,13 +40,13 @@ import rpy2.rinterface
 Once you do that, if you start the cell with %%R , it is a R cell.  
 
 In case you need to import a package that is not there you can use the following command:  
-´´´
+```
 import rpy2.robjects.packages as rpackages
 rpackages.importr('lme4')
-´´´
+```
 
 If you need to install some R package:  
-´´´ 
+```
 import rpy2.robjects as robjects
 import rpy2.robjects.packages as rpackages
 from rpy2.robjects.vectors import StrVector
@@ -63,7 +64,7 @@ if not have_package:
         if len(packnames_to_install) >0:
         utils.install_packages(StrVector(packnames_to_install))
         
-´´´
+```
 
 
 #### Usefull commands  
@@ -74,18 +75,18 @@ Transform pandas dataframes to R dataframes.
 ```
 
 Linear Model.  
-´´´ 
+```
 %%R -o model -o summary -i python_df 
 model <- lm(A~B, data=python_df)
 summary <- summary(model)
-´´´
+```
 
 Linear mixed model.  
-´´´
+```
 %%R -o model -o summary -i python_df 
 model =  lmer('A ~ B + (1|C)', data = python_df)
 summary <- summary(model)
-´´´
+```
 
 
 
