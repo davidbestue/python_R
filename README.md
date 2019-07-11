@@ -18,3 +18,6 @@ devtools::install_github("IRkernel/IRkernel")
 
 IRkernel::installspec()
 ```
+
+If the second command line does not work, you need to install Git [here](https://git-scm.com/download/win).  
+
